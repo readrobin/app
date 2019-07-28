@@ -37,7 +37,8 @@ module.exports = (api) => {
         {
           modules: false,
           targets: '> 0.25%, not dead',
-          useBuiltIns: 'entry'
+          useBuiltIns: 'usage',
+          corejs: 3
         }
       ],
       ...common.presets
