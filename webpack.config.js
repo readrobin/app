@@ -47,7 +47,7 @@ module.exports = (env) => {
     devtool: 'inline-source-map',
     devServer: {
       compress: true,
-      contentBase: './dist',
+      contentBase: './src',
       noInfo: true,
       open: true,
       port: 9000,
