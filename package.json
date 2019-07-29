@@ -1,24 +1,25 @@
 {
-  "name": "readrobin",
-  "version": "0.0.1",
+  "author": "Grahn Cooledge",
+  "bugs": {
+    "url": "https://github.com/WormJim/readrobin/issues"
+  },
   "description": "Read Robin Book Club",
+  "engines": { "node": "12.2.0" },
+  "homepage": "https://github.com/WormJim/readrobin#readme",
+  "license": "ISC",
   "main": "index.js",
+  "name": "readrobin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WormJim/readrobin.git"
+  },
   "scripts": {
     "build-frontend-dev": "webpack-dev-server --env.NODE_ENV=local --color --progress",
     "build-frontend-pro": "webpack --env.NODE_ENV=local --env.production ",
     "serve-dev": "cross-env nodemon --extensions \".ts\",\".tsx\" --ignore src/ --ignore __tests__/ ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WormJim/readrobin.git"
-  },
-  "author": "Grahn Cooledge",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WormJim/readrobin/issues"
-  },
-  "homepage": "https://github.com/WormJim/readrobin#readme",
+  "version": "0.0.1",
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
