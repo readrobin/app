@@ -1,3 +1,5 @@
+// FIXME TODO: Construct Server and Frontend Babel Config
+/* eslint-disable @typescript-eslint/no-unused-vars */
 module.exports = (api) => {
   api.cache.forever();
 
