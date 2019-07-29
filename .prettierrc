@@ -1,6 +1,5 @@
 {
   "arrowParens": "always",
-  "jsxBracketSameLine": false,
   "overrides": [
     {
       "files": ".prettierrc",
@@ -21,6 +20,7 @@
   ],
   "parser": "typescript",
   "printWidth": 100,
+  "quoteProps": "consistent",
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all"
