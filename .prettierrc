@@ -2,15 +2,7 @@
   "arrowParens": "always",
   "overrides": [
     {
-      "files": ".prettierrc",
-      "options": { "parser": "json" }
-    },
-    {
-      "files": ".eslintrc",
-      "options": { "parser": "json" }
-    },
-    {
-      "files": "*.json",
+      "files": [".*rc", "*.json"],
       "options": { "parser": "json" }
     },
     {
