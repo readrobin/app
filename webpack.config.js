@@ -49,8 +49,7 @@ module.exports = (env) => {
       compress: true,
       noInfo: true,
       open: true,
-      port: 9000,
-      watchContentBase: true
+      port: 9000
     },
     watchOptions: {
       aggregateTimeout: 300,
