@@ -3,9 +3,11 @@ import ReactDom from 'react-dom';
 import { Comp } from 'src/blah';
 
 const App = () => {
+  const helloWorld = 'Hello World';
+
   return (
     <>
-      <h1>Hello World!</h1>
+      <h1>{helloWorld}</h1>
       <Comp />
     </>
   );
