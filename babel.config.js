@@ -1,5 +1,4 @@
 // FIXME TODO: Construct Server and Frontend Babel Config
-/* eslint-disable @typescript-eslint/no-unused-vars */
 module.exports = (api) => {
   api.cache.forever();
 
@@ -10,9 +9,9 @@ module.exports = (api) => {
         '@babel/typescript',
         {
           isTSX: true,
-          allExtensions: true
-        }
-      ]
+          allExtensions: true,
+        },
+      ],
     ],
     plugins: [
       '@babel/plugin-proposal-class-properties',
@@ -22,10 +21,10 @@ module.exports = (api) => {
         'module-resolver',
         {
           extensions: ['.ts', '.tsx'],
-          root: ['./']
-        }
-      ]
-    ]
+          root: ['./'],
+        },
+      ],
+    ],
   };
 
   const server = {};
@@ -40,10 +39,10 @@ module.exports = (api) => {
           modules: false,
           targets: '> 0.25%, not dead',
           useBuiltIns: 'usage',
-          corejs: 3
-        }
+          corejs: 3,
+        },
       ],
-      ...common.presets
-    ]
+      ...common.presets,
+    ],
   };
 };
