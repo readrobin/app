@@ -1,5 +1,3 @@
 import React, { memo } from 'react';
 
-export default memo(() => {
-  return <h2>Comp</h2>;
-});
+export default memo(() => <h2>Comp Added Again</h2>);
