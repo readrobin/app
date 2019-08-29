@@ -5,25 +5,25 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/pages/index.html',
   title: 'Read Robin',
-  filename: 'index.html'
+  filename: 'index.html',
 });
 
 module.exports = (env) => {
   const common = {
-    mode: env.production === 'production' ? env : 'development',
+    mode: env.production === 'production' ? env.production : 'development',
     entry: {
-      source: './src/index.tsx'
+      source: './src/index.tsx',
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-      publicPath: '/'
+      publicPath: '/',
     },
     resolve: {
       alias: {
-        config: path.resolve(__dirname, 'config/config')
+        config: path.resolve(__dirname, 'config/config'),
       },
-      extensions: ['.tsx', '.ts', '.js', '.json']
+      extensions: ['.tsx', '.ts', '.js', '.json'],
     },
     module: {
       rules: [
@@ -33,13 +33,13 @@ module.exports = (env) => {
           use: {
             loader: 'babel-loader',
             options: {
-              configFile: path.resolve(__dirname, 'babel.config.js')
-            }
-          }
-        }
-      ]
+              configFile: path.resolve(__dirname, 'babel.config.js'),
+            },
+          },
+        },
+      ],
     },
-    plugins: [htmlPlugin, new CleanWebpackPlugin()]
+    plugins: [htmlPlugin, new CleanWebpackPlugin()],
   };
 
   const production = {};
@@ -49,16 +49,16 @@ module.exports = (env) => {
       compress: true,
       noInfo: true,
       open: true,
-      port: 9000
+      port: 9000,
     },
     watchOptions: {
       aggregateTimeout: 300,
-      ignored: /node_modules/
-    }
+      ignored: /node_modules/,
+    },
   };
 
   return {
     ...common,
-    ...(env.production === 'production' ? production : development)
+    ...(env.production === 'production' ? production : development),
   };
 };
