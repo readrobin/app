@@ -16,8 +16,8 @@
     "url": "git+https://github.com/WormJim/readrobin.git"
   },
   "scripts": {
-    "build-frontend-dev": "webpack-dev-server --env.NODE_ENV=local --color --progress",
-    "build-frontend-pro": "webpack --env.NODE_ENV=local --env.production",
+    "frontend-dev": "webpack-dev-server --env.NODE_ENV=local --color --progress",
+    "frontend-pro": "webpack --env.NODE_ENV=local --env.production",
     "server-dev": "cross-env nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
