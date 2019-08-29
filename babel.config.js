@@ -1,10 +1,8 @@
-// FIXME TODO: Construct Server and Frontend Babel Config
 module.exports = (api) => {
   api.cache.forever();
 
   const common = {
     presets: [
-      '@babel/react',
       [
         '@babel/typescript',
         {
@@ -27,22 +25,37 @@ module.exports = (api) => {
     ],
   };
 
-  const server = {};
-  const frontend = {};
-
-  return {
-    plugins: [...common.plugins],
+  const server = {
     presets: [
+      [
+        '@babel/env',
+        {
+          targets: { node: 'current' },
+          useBuiltIns: false,
+        },
+      ],
+    ],
+  };
+
+  const frontend = {
+    presets: [
+      '@babel/react',
       [
         '@babel/env',
         {
           modules: false,
           targets: '> 0.25%, not dead',
-          useBuiltIns: 'usage',
+          useBuiltIns: 'entry',
           corejs: 3,
         },
       ],
-      ...common.presets,
     ],
+  };
+
+  const source = process.env.NODE_SERVER ? server.presets : frontend.presets;
+
+  return {
+    plugins: [...common.plugins],
+    presets: [...source, ...common.presets],
   };
 };
