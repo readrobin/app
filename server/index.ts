@@ -11,3 +11,7 @@ server.listen(5000, () => {
 server.get('/', (req, res) => {
   res.send('Awesome! We\'re live debugging this!');
 });
+
+server.get('/test', (req, res) => {
+  res.send('This is a test');
+});
