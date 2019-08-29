@@ -4,7 +4,9 @@
     "url": "https://github.com/WormJim/readrobin/issues"
   },
   "description": "Read Robin Book Club",
-  "engines": { "node": "12.2.0" },
+  "engines": {
+    "node": "12.2.0"
+  },
   "homepage": "https://github.com/WormJim/readrobin#readme",
   "license": "ISC",
   "main": "index.js",
@@ -15,8 +17,8 @@
   },
   "scripts": {
     "build-frontend-dev": "webpack-dev-server --env.NODE_ENV=local --color --progress",
-    "build-frontend-pro": "webpack --env.NODE_ENV=local --env.production ",
-    "serve-dev": "cross-env nodemon --extensions \".ts\",\".tsx\" --ignore src/ --ignore __tests__/ ",
+    "build-frontend-pro": "webpack --env.NODE_ENV=local --env.production",
+    "server-dev": "cross-env nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.0.1",
@@ -25,17 +27,21 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
     "core-js": "^3.1.4",
+    "express": "^4.17.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "ts-node": "^8.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/express": "^4.17.1",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@typescript-eslint/eslint-plugin": "^1.12.0",
