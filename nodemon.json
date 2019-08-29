@@ -1,7 +1,7 @@
 {
   "env": {
     "NODE_ENV": "development",
-    "NODE_SEVER": "server"
+    "NODE_SERVER": "server"
   },
   "exec": "babel-node --extensions \".ts\",\".tsx\" server/index.ts --inspect",
   "ext": "ts,tsx",
