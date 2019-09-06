@@ -76,7 +76,7 @@
     "dot-location": "error",
     "dot-notation": "error",
     "eol-last": "error",
-    "eqeqeq": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
     "func-call-spacing": "error",
     "func-name-matching": "error",
     "func-names": "error",
