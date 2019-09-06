@@ -8,4 +8,4 @@ To Run The Front End in Dev Mode with Webpack `npm run frontend-dev`
 
 To Bundle Frontend into dist folder run `npm run frontend-pro`
 
-Scripts `Test` and `frontend-pro` are in WIP 
+Scripts `Test` is in WIP 
