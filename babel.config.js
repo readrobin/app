@@ -52,10 +52,8 @@ module.exports = (api) => {
     ],
   };
 
-  const source = process.env.NODE_SERVER ? server.presets : frontend.presets;
-
   return {
     plugins: [...common.plugins],
-    presets: [...source, ...common.presets],
+    presets: [...(process.env.NODE_SERVER ? server.presets : frontend.presets), ...common.presets],
   };
 };
