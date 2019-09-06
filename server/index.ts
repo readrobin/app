@@ -5,16 +5,14 @@ const server = express();
 
 server.use(express.static(path.join(__dirname, '../', 'dist')));
 
-// eslint-disable-next-line no-magic-numbers
-server.listen(5000, () => {
-  // eslint-disable-next-line no-console
-  console.log('listening on port 5000');
-});
-
-server.get('/', (req, res) => {
+server.get('/', (_, res) => {
   res.send('Awesome! We\'re live debugging this!');
 });
 
-server.get('/test', (req, res) => {
+server.get('/test', (_, res) => {
   res.send('This is a test');
+});
+
+server.listen(5000, () => {
+  console.info('listening on port 5000');
 });
