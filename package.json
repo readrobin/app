@@ -60,6 +60,7 @@
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
+    "terser-webpack-plugin": "^2.0.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack": "^4.36.1",
