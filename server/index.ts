@@ -1,6 +1,9 @@
 import express from 'express';
+import path from 'path';
 
 const server = express();
+
+server.use(express.static(path.join(__dirname, '../', 'dist')));
 
 // eslint-disable-next-line no-magic-numbers
 server.listen(5000, () => {
