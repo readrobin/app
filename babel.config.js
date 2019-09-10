@@ -3,14 +3,13 @@ module.exports = (api) => {
 
   const common = {
     presets: [
-      '@babel/react',
       [
         '@babel/typescript',
         {
           isTSX: true,
-          allExtensions: true
-        }
-      ]
+          allExtensions: true,
+        },
+      ],
     ],
     plugins: [
       '@babel/plugin-proposal-class-properties',
@@ -20,27 +19,41 @@ module.exports = (api) => {
         'module-resolver',
         {
           extensions: ['.ts', '.tsx'],
-          root: ['./']
-        }
-      ]
-    ]
+          root: ['./'],
+        },
+      ],
+    ],
   };
 
-  const server = {};
-  const frontend = {};
-
-  return {
-    plugins: [...common.plugins],
+  const server = {
     presets: [
+      [
+        '@babel/env',
+        {
+          targets: { node: 'current' },
+          useBuiltIns: false,
+        },
+      ],
+    ],
+  };
+
+  const frontend = {
+    presets: [
+      '@babel/react',
       [
         '@babel/env',
         {
           modules: false,
           targets: '> 0.25%, not dead',
-          useBuiltIns: 'entry'
-        }
+          useBuiltIns: 'entry',
+          corejs: 3,
+        },
       ],
-      ...common.presets
-    ]
+    ],
+  };
+
+  return {
+    plugins: [...common.plugins],
+    presets: [...(process.env.NODE_SERVER ? server.presets : frontend.presets), ...common.presets],
   };
 };
