@@ -1,0 +1,19 @@
+{
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": [".*rc", "*.json"],
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.html",
+      "options": { "parser": "html" }
+    }
+  ],
+  "parser": "typescript",
+  "printWidth": 100,
+  "quoteProps": "consistent",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}
